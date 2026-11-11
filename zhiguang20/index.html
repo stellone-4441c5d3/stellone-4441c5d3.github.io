@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凪光2025作品集 - 作品归档与更新追踪</title>
+  <meta name="description" content="凪光2025作品集汇集2025年度摄影与影像作品，含《潮汐留白》《夜航西飞》等条目、分类导航、更新记录与读者评论，适合影像爱好者按类型检索与比较。">
+  <meta name="keywords" content="凪光2025作品集">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b34'/%3E%3Ccircle cx='32' cy='28' r='13' fill='none' stroke='%23f2c14e' stroke-width='3'/%3E%3Cpath d='M16 48h32M22 54h20' stroke='%23f2c14e' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --ink:#14252b;
+      --ink-2:#3d545c;
+      --ink-3:#7a8f96;
+      --bg:#f4f1ea;
+      --panel:#fbf9f4;
+      --panel-2:#ece7dc;
+      --line:#d8d1c4;
+      --brand:#0f2b34;
+      --brand-2:#1c4650;
+      --brand-soft:#d9e6e3;
+      --accent:#d88b2b;
+      --accent-soft:#f6e4c6;
+      --gold:#f2c14e;
+      --r-card:14px;
+      --r-btn:8px;
+      --r-tag:999px;
+      --r-banner:18px;
+      --shadow:0 2px 10px rgba(15,43,52,.06);
+      --shadow-hover:0 10px 26px rgba(15,43,52,.13);
+      --font: "Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+      --font-sans: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+      --sticky-h: 104px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h)}
+    body{
+      margin:0;
+      font-family:var(--font-sans);
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.75;
+      font-size:16px;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button{font-family:inherit;cursor:pointer}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+    /* ---------- 吸顶区 ---------- */
+    .sticky-wrap{
+      position:sticky;top:0;z-index:80;
+      background:rgba(244,241,234,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .notice-bar{
+      background:var(--brand);
+      color:#e9f0ee;
+      font-size:13px;
+      line-height:1.5;
+    }
+    .notice-inner{
+      max-width:1320px;margin:0 auto;padding:7px 22px;
+      display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+    }
+    .notice-inner .brand-mark{
+      font-weight:700;letter-spacing:.04em;color:var(--gold);
+      white-space:nowrap;font-size:13px;
+    }
+    .notice-inner ul{
+      list-style:none;margin:0;padding:0;display:flex;gap:24px;flex-wrap:wrap;
+    }
+    .notice-inner li{display:flex;gap:6px;align-items:baseline}
+    .notice-inner time{color:var(--gold);font-variant-numeric:tabular-nums;white-space:nowrap}
+    .notice-inner .sep{color:#5b7b82}
+    .site-header{
+      max-width:1320px;margin:0 auto;padding:12px 22px;
+      display:flex;align-items:center;gap:26px;flex-wrap:wrap;
+    }
+    .logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+    .logo svg{width:42px;height:42px;flex-shrink:0}
+    .logo-text{
+      font-family:var(--font);
+      font-weight:700;font-size:22px;letter-spacing:.06em;
+      color:var(--brand);white-space:nowrap;
+    }
+    .main-nav{display:flex;gap:6px;flex-wrap:wrap;flex:1;min-width:0}
+    .main-nav a{
+      font-size:14px;padding:6px 11px;border-radius:var(--r-btn);
+      color:var(--ink-2);transition:background .18s,color .18s;white-space:nowrap;
+    }
+    .main-nav a:hover,.main-nav a:focus-visible{background:var(--brand-soft);color:var(--brand)}
+    .header-actions{display:flex;gap:10px;align-items:center;flex-shrink:0}
+    .search-box{position:relative}
+    .search-box input{
+      width:190px;padding:8px 12px 8px 32px;border:1px solid var(--line);
+      border-radius:var(--r-tag);background:var(--panel);font-size:13px;color:var(--ink);
+    }
+    .search-box input:focus{border-color:var(--brand-2)}
+    .search-box .ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--ink-3)}
+    .search-msg{
+      position:absolute;top:calc(100% + 6px);left:0;right:-40px;
+      background:var(--panel);border:1px solid var(--line);border-radius:10px;
+      padding:9px 12px;font-size:12.5px;color:var(--ink-2);box-shadow:var(--shadow);
+      display:none;z-index:90;
+    }
+    .search-msg.show{display:block}
+    .menu-toggle{
+      display:none;background:var(--brand);color:#fff;border:0;border-radius:var(--r-btn);
+      padding:8px 12px;font-size:13px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero{
+      position:relative;overflow:hidden;
+      background:
+        radial-gradient(1100px 420px at 82% -10%, rgba(242,193,78,.22), transparent 62%),
+        radial-gradient(800px 380px at 6% 110%, rgba(28,70,80,.32), transparent 60%),
+        linear-gradient(160deg,#0f2b34 0%,#173d47 58%,#1c4650 100%);
+      color:#eef3f1;
+    }
+    .hero::after{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background-image:
+        repeating-linear-gradient(115deg, rgba(255,255,255,.045) 0 1px, transparent 1px 92px);
+      opacity:.7;
+    }
+    .hero-inner{
+      position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:54px 22px 46px;
+      display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:42px;align-items:center;
+    }
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      font-size:12.5px;letter-spacing:.16em;color:var(--gold);
+      border:1px solid rgba(242,193,78,.4);border-radius:var(--r-tag);
+      padding:5px 13px;margin-bottom:20px;
+    }
+    .hero-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+    .hero h1{
+      font-family:var(--font);font-size:clamp(30px,4.4vw,52px);
+      line-height:1.22;margin:0 0 18px;letter-spacing:.03em;font-weight:700;
+    }
+    .hero-desc{
+      font-size:15.5px;line-height:1.85;color:#c9d8d6;max-width:560px;margin:0 0 26px;
+    }
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;border-radius:var(--r-btn);
+      padding:10px 20px;font-size:14px;border:1px solid transparent;
+      transition:transform .18s,box-shadow .18s,background .18s;font-weight:600;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--gold);color:#1a2c31}
+    .btn-primary:hover{box-shadow:0 8px 22px rgba(242,193,78,.32)}
+    .btn-ghost{border-color:rgba(255,255,255,.4);color:#eef3f1;background:transparent}
+    .btn-ghost:hover{background:rgba(255,255,255,.1)}
+    .hero-stats{
+      display:flex;gap:28px;margin-top:30px;flex-wrap:wrap;
+      border-top:1px solid rgba(255,255,255,.16);padding-top:18px;
+    }
+    .hero-stats div{font-size:12.5px;color:#a9bfbd;letter-spacing:.04em}
+    .hero-stats strong{display:block;font-family:var(--font);font-size:23px;color:#fff;letter-spacing:.02em}
+    .hero-visual{position:relative;min-height:290px}
+    .hero-visual svg{width:100%;height:auto;max-height:360px;filter:drop-shadow(0 14px 30px rgba(0,0,0,.28))}
+    .hero-tag{
+      position:absolute;background:rgba(15,43,52,.78);border:1px solid rgba(242,193,78,.4);
+      color:#f0f4f2;font-size:12px;padding:5px 11px;border-radius:var(--r-tag);
+      backdrop-filter:blur(6px);white-space:nowrap;
+    }
+    .hero-tag.t1{top:8%;right:4%}
+    .hero-tag.t2{bottom:16%;left:-2%}
+    .hero-tag.t3{bottom:2%;right:10%}
+
+    /* ---------- 主体三栏 ---------- */
+    .layout{
+      max-width:1320px;margin:0 auto;padding:34px 22px 10px;
+      display:grid;grid-template-columns:176px minmax(0,1fr) 250px;gap:30px;
+      align-items:start;
+    }
+    .channel-col{position:sticky;top:calc(var(--sticky-h) + 14px)}
+    .channel-title{
+      font-size:11.5px;letter-spacing:.18em;color:var(--ink-3);
+      text-transform:uppercase;margin:0 0 12px;font-weight:600;
+    }
+    .channel-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+    .channel-list a{
+      display:flex;align-items:center;justify-content:space-between;gap:8px;
+      font-size:13.5px;padding:7px 10px;border-radius:var(--r-btn);color:var(--ink-2);
+      border-left:2px solid transparent;transition:background .16s,color .16s,border-color .16s;
+    }
+    .channel-list a:hover,.channel-list a:focus-visible{background:var(--panel-2);color:var(--brand)}
+    .channel-list a.active{background:var(--brand-soft);color:var(--brand);border-left-color:var(--brand);font-weight:600}
+    .channel-list .cnt{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+    .channel-note{
+      margin-top:18px;padding:12px;border:1px dashed var(--line);border-radius:var(--r-card);
+      font-size:12px;color:var(--ink-3);line-height:1.65;background:var(--panel);
+    }
+
+    .main-col{min-width:0}
+    .aside-col{position:sticky;top:calc(var(--sticky-h) + 14px);display:flex;flex-direction:column;gap:20px}
+
+    section.block{margin-bottom:38px;scroll-margin-top:var(--sticky-h)}
+    .block-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+    .block-head h2{
+      font-family:var(--font);font-size:22px;margin:0;letter-spacing:.02em;color:var(--brand);
+      display:flex;align-items:center;gap:10px;
+    }
+    .block-head h2::before{
+      content:"";width:5px;height:20px;border-radius:2px;background:var(--accent);flex-shrink:0;
+    }
+    .block-head .lead{font-size:12.5px;color:var(--ink-3);margin:0}
+    .block-head .link-more{font-size:12.5px;color:var(--brand-2);border-bottom:1px solid var(--line)}
+    .block-head .link-more:hover{color:var(--accent);border-color:var(--accent)}
+
+    /* 概览 */
+    .overview{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:22px 24px;box-shadow:var(--shadow);
+    }
+    .overview p{margin:0 0 12px;font-size:15px;color:var(--ink-2);line-height:1.9}
+    .overview p:last-child{margin-bottom:0}
+    .overview strong{color:var(--brand);font-weight:600}
+
+    /* 卡片网格 */
+    .card-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:16px;
+    }
+    .card{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      overflow:hidden;display:flex;flex-direction:column;
+      transition:transform .2s,box-shadow .2s,border-color .2s;
+      box-shadow:var(--shadow);min-width:0;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:#c3bbab}
+    .card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--panel-2)}
+    .card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .card:hover .card-thumb img{transform:scale(1.04)}
+    .card-badge{
+      position:absolute;top:9px;left:9px;background:rgba(15,43,52,.86);color:#f0f4f2;
+      font-size:11px;padding:3px 9px;border-radius:var(--r-tag);letter-spacing:.03em;
+    }
+    .card-body{padding:13px 14px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+    .card-body h3{
+      font-size:15px;margin:0;line-height:1.45;color:var(--brand);font-weight:700;
+      font-family:var(--font);
+    }
+    .card-body h3 a:hover{color:var(--accent)}
+    .card-tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{
+      font-size:11px;padding:2px 8px;border-radius:var(--r-tag);
+      background:var(--panel-2);color:var(--ink-2);white-space:nowrap;
+    }
+    .tag.accent{background:var(--accent-soft);color:#8a5314}
+    .card-note{font-size:12.5px;color:var(--ink-2);line-height:1.7;margin:0;flex:1}
+    .card-meta{
+      display:flex;justify-content:space-between;align-items:center;gap:8px;
+      font-size:11.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:8px;
+    }
+    .card-meta .hot{color:var(--accent);font-weight:600}
+    .score{color:var(--brand-2);font-weight:700;font-variant-numeric:tabular-nums}
+
+    /* 更新列表 */
+    .update-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden}
+    .update-list li{
+      display:grid;grid-template-columns:80px minmax(0,1fr);gap:14px;
+      padding:13px 18px;border-bottom:1px solid var(--line);align-items:start;
+    }
+    .update-list li:last-child{border-bottom:0}
+    .update-list time{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:2px}
+    .update-list .u-title{font-size:14px;color:var(--brand);font-weight:600;margin:0 0 3px}
+    .update-list .u-desc{font-size:12.5px;color:var(--ink-2);margin:0;line-height:1.65}
+    .u-type{font-size:10.5px;color:var(--accent);border:1px solid var(--accent-soft);border-radius:var(--r-tag);padding:0 7px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+
+    /* 分类入口 */
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+    .cat-item{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:14px 15px;transition:border-color .18s,background .18s,transform .18s;
+      display:flex;flex-direction:column;gap:5px;
+    }
+    .cat-item:hover{border-color:var(--brand-2);background:#fff;transform:translateY(-2px)}
+    .cat-item b{font-size:14px;color:var(--brand);font-family:var(--font)}
+    .cat-item span{font-size:11.5px;color:var(--ink-3);line-height:1.55}
+    .cat-item .num{font-size:11px;color:var(--accent);font-weight:600}
+
+    /* 深度解析 */
+    .deep{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:26px 28px;box-shadow:var(--shadow);
+    }
+    .deep h3{
+      font-family:var(--font);font-size:17.5px;color:var(--brand);margin:26px 0 10px;
+      letter-spacing:.01em;line-height:1.5;
+    }
+    .deep h3:first-of-type{margin-top:4px}
+    .deep p{font-size:14.5px;color:var(--ink-2);line-height:1.92;margin:0 0 12px}
+    .deep ul{margin:0 0 14px;padding-left:20px}
+    .deep li{font-size:14px;color:var(--ink-2);line-height:1.85;margin-bottom:6px}
+    .deep .callout{
+      border-left:3px solid var(--accent);background:var(--accent-soft);
+      padding:12px 16px;border-radius:0 var(--r-btn) var(--r-btn) 0;
+      font-size:13.5px;color:#5e3c10;margin:14px 0;
+    }
+    .deep .callout strong{color:#3d2705}
+
+    /* 体验指南 */
+    .guide{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;
+    }
+    .guide-step{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:17px 18px;position:relative;
+    }
+    .guide-step .step-num{
+      font-family:var(--font);font-size:26px;color:var(--accent);line-height:1;
+      margin-bottom:8px;font-weight:700;
+    }
+    .guide-step h4{font-size:14.5px;margin:0 0 7px;color:var(--brand);font-family:var(--font)}
+    .guide-step p{font-size:12.5px;color:var(--ink-2);margin:0;line-height:1.75}
+
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    details.faq{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:0;overflow:hidden;transition:border-color .18s;
+    }
+    details.faq[open]{border-color:var(--brand-2);background:#fff}
+    details.faq summary{
+      cursor:pointer;list-style:none;padding:14px 18px;font-size:14.5px;
+      font-weight:600;color:var(--brand);display:flex;justify-content:space-between;gap:14px;align-items:center;
+    }
+    details.faq summary::-webkit-details-marker{display:none}
+    details.faq summary::after{
+      content:"+";font-size:20px;color:var(--accent);line-height:1;flex-shrink:0;font-weight:400;
+    }
+    details.faq[open] summary::after{content:"–"}
+    details.faq .faq-body{padding:0 18px 16px;font-size:13.5px;color:var(--ink-2);line-height:1.85}
+    details.faq .faq-body p{margin:0}
+
+    /* 评论 */
+    .comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+    .comment{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:13px 15px;font-size:13px;color:var(--ink-2);line-height:1.72;
+      display:flex;flex-direction:column;gap:6px;min-width:0;
+    }
+    .comment .cm-head{display:flex;justify-content:space-between;gap:8px;align-items:center}
+    .comment .cm-name{font-size:12.5px;font-weight:700;color:var(--brand)}
+    .comment .cm-time{font-size:11px;color:var(--ink-3);white-space:nowrap}
+    .comment .cm-text{margin:0}
+    .comment .cm-ref{font-size:11px;color:var(--accent);background:var(--accent-soft);border-radius:var(--r-tag);padding:1px 7px;align-self:flex-start}
+
+    /* 资讯 */
+    .news-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden}
+    .news-list li{padding:15px 18px;border-bottom:1px solid var(--line)}
+    .news-list li:last-child{border-bottom:0}
+    .news-list .n-title{font-size:14.5px;font-weight:700;color:var(--brand);margin:0 0 4px;font-family:var(--font)}
+    .news-list .n-title a:hover{color:var(--accent)}
+    .news-list .n-meta{font-size:11.5px;color:var(--ink-3);margin:0 0 5px;display:flex;gap:12px;flex-wrap:wrap}
+    .news-list .n-sum{font-size:12.5px;color:var(--ink-2);margin:0;line-height:1.7}
+
+    /* 相关推荐 + 补充 */
+    .rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+    .rec-tags a{
+      font-size:12.5px;padding:6px 13px;border-radius:var(--r-tag);
+      background:var(--panel);border:1px solid var(--line);color:var(--ink-2);
+      transition:all .18s;
+    }
+    .rec-tags a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .rec-tags a .small{color:var(--ink-3);font-size:11px;margin-left:4px}
+    .rec-tags a:hover .small{color:#cfe0dd}
+
+    .rank-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+    .rank-list li{
+      display:flex;gap:12px;align-items:flex-start;background:var(--panel);
+      border:1px solid var(--line);border-radius:var(--r-card);padding:11px 14px;
+    }
+    .rank-num{
+      font-family:var(--font);font-size:17px;font-weight:700;color:var(--ink-3);
+      width:24px;text-align:center;flex-shrink:0;line-height:1.5;
+    }
+    .rank-list li:nth-child(1) .rank-num{color:#b8791a}
+    .rank-list li:nth-child(2) .rank-num{color:#8a8f91}
+    .rank-list li:nth-child(3) .rank-num{color:#a96b3c}
+    .rank-body{min-width:0}
+    .rank-body b{font-size:13.5px;color:var(--brand);display:block;margin-bottom:2px}
+    .rank-body span{font-size:11.5px;color:var(--ink-3);line-height:1.6;display:block}
+
+    /* 侧栏 */
+    .side-card{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+      padding:16px 16px 14px;box-shadow:var(--shadow);
+    }
+    .side-card h2{
+      font-family:var(--font);font-size:15px;color:var(--brand);margin:0 0 12px;
+      letter-spacing:.02em;display:flex;align-items:center;gap:7px;
+    }
+    .side-card h2::before{content:"";width:4px;height:14px;background:var(--accent);border-radius:2px}
+    .side-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+    .side-list li{font-size:12.5px;color:var(--ink-2);line-height:1.6;display:flex;gap:9px;align-items:baseline}
+    .side-list .idx{
+      font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums;width:16px;flex-shrink:0;
+    }
+    .side-list b{color:var(--brand);font-weight:600}
+    .side-list .s-meta{font-size:11px;color:var(--ink-3);margin-left:auto;white-space:nowrap}
+    .side-timeline{position:relative;padding-left:14px;border-left:2px solid var(--line);margin-left:4px}
+    .side-timeline .tl-item{position:relative;padding-bottom:13px}
+    .side-timeline .tl-item:last-child{padding-bottom:0}
+    .side-timeline .tl-item::before{
+      content:"";position:absolute;left:-20px;top:6px;width:7px;height:7px;
+      border-radius:50%;background:var(--accent);border:2px solid var(--panel);
+    }
+    .side-timeline time{font-size:11px;color:var(--ink-3);display:block}
+    .side-timeline b{font-size:12.5px;color:var(--brand);display:block;line-height:1.5}
+    .side-cta{
+      background:linear-gradient(150deg,var(--brand) 0%,var(--brand-2) 100%);
+      color:#e9f0ee;border:0;
+    }
+    .side-cta h2{color:#fff}
+    .side-cta h2::before{background:var(--gold)}
+    .side-cta p{font-size:12.5px;color:#bfd2cf;line-height:1.75;margin:0 0 12px}
+    .side-cta .btn{background:var(--gold);color:#1a2c31;font-size:12.5px;padding:8px 15px;width:100%;justify-content:center}
+
+    /* ---------- 页尾 ---------- */
+    .site-footer{
+      margin-top:40px;background:var(--brand);color:#c5d5d2;font-size:13px;
+    }
+    .footer-inner{max-width:1320px;margin:0 auto;padding:42px 22px 26px}
+    .footer-top{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(2,minmax(0,.85fr));gap:34px;margin-bottom:30px}
+    .footer-brand .logo-text{color:#fff;font-size:20px;margin-bottom:10px;display:block}
+    .footer-brand .logo{color:#fff;margin-bottom:10px}
+    .footer-brand p{font-size:12.5px;line-height:1.85;color:#a9bfbd;margin:0;max-width:380px}
+    .footer-col h3{font-size:12px;letter-spacing:.14em;color:var(--gold);margin:0 0 12px;font-weight:600}
+    .footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+    .footer-col a{font-size:12.5px;color:#c5d5d2}
+    .footer-col a:hover{color:var(--gold)}
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.13);padding-top:16px;
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      font-size:11.5px;color:#8fa8a5;
+    }
+    .footer-bottom .upd{color:#b9ccc9}
+
+    /* 回到顶部 */
+    #toTop{
+      position:fixed;right:20px;bottom:24px;z-index:70;
+      width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+      background:var(--panel);color:var(--brand);box-shadow:var(--shadow);
+      display:flex;align-items:center;justify-content:center;font-size:18px;
+      opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .2s;
+    }
+    #toTop.show{opacity:1;visibility:visible}
+    #toTop:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1080px){
+      .layout{grid-template-columns:168px minmax(0,1fr);}
+      .aside-col{display:none}
+    }
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr;gap:24px;padding:40px 22px 34px}
+      .hero-visual{max-width:420px;margin:0 auto;width:100%}
+      .layout{grid-template-columns:1fr}
+      .channel-col{
+        position:static;display:flex;flex-direction:column;gap:10px;
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+        padding:12px 14px;order:-1;
+      }
+      .channel-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+      .channel-list a{border-left:0;border:1px solid var(--line);font-size:12.5px;padding:5px 10px}
+      .channel-list a.active{border-color:var(--brand);background:var(--brand);color:#fff}
+      .channel-note{display:none}
+      .channel-title{margin:0}
+      .footer-top{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 740px){
+      .site-header{padding:10px 14px;gap:12px}
+      .logo-text{font-size:19px}
+      .main-nav{display:none;width:100%;order:3}
+      .main-nav.open{display:flex}
+      .menu-toggle{display:inline-flex;align-items:center;gap:6px}
+      .header-actions{width:100%;order:4;justify-content:space-between}
+      .search-box{flex:1}
+      .search-box input{width:100%}
+      .hero-inner{padding:34px 14px 28px}
+      .hero-stats{gap:18px}
+      .layout{padding:22px 14px 6px;gap:22px}
+      .notice-inner{padding:6px 14px;gap:10px;font-size:12px}
+      .notice-inner ul{gap:12px}
+      .footer-inner{padding:32px 14px 22px}
+      .footer-top{grid-template-columns:1fr;gap:22px}
+      .deep{padding:20px 18px}
+      .overview{padding:18px 16px}
+      .comment-grid{grid-template-columns:1fr}
+      .update-list li{grid-template-columns:1fr;gap:4px}
+      .update-list time{padding-top:0}
+      #toTop{right:14px;bottom:16px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区：公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="notice-bar" aria-label="更新公告">
+    <div class="notice-inner">
+      <span class="brand-mark">凪光2025作品集</span>
+      <ul>
+        <li><time datetime="2026-11-08">11月8日</time><span class="sep">·</span>《潮汐留白》新增第12组夜拍</li>
+        <li><time datetime="2026-11-06">11月6日</time><span class="sep">·</span>「城市边缘」系列补录4张底片扫描</li>
+        <li><span class="sep">·</span>2025年度作品总览页已更新至46组</li>
+      </ul>
+    </div>
+  </div>
+  <header class="site-header">
+    <a class="logo" href="/#top" aria-label="凪光2025作品集首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f2b34"/>
+        <circle cx="32" cy="27" r="12" fill="none" stroke="#f2c14e" stroke-width="3"/>
+        <path d="M16 46h32M22 53h20" stroke="#f2c14e" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="32" cy="27" r="3.4" fill="#f2c14e"/>
+      </svg>
+      <span class="logo-text">凪光2025作品集</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">年度总览</a>
+      <a href="/#featured">作品精选</a>
+      <a href="/#updates">更新记录</a>
+      <a href="/#categories">类型索引</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观展路径</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#news">动态</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/>
+        </svg>
+        <input type="search" id="siteSearch" placeholder="搜索作品名 / 类型" aria-label="搜索作品名或类型">
+        <div class="search-msg" id="searchMsg" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">2025 年度影像归档</span>
+      <h1>凪光2025作品集</h1>
+      <p class="hero-desc">
+        收录凪光在2025年完成的46组摄影与短片项目，包含《潮汐留白》《夜航西飞》《低温季风》等系列，按城市边缘、自然光、深夜街拍、人像与实验短片分类整理，附拍摄参数与更新记录。
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#featured">浏览精选作品</a>
+        <a class="btn btn-ghost" href="/#updates">查看更新记录</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>46</strong>组作品归档</div>
+        <div><strong>8</strong>个类型索引</div>
+        <div><strong>2026-11-08</strong>最近更新</div>
+        <div><strong>5</strong>部实验短片</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img" aria-label="抽象海面与光斑构图">
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1c4650"/>
+            <stop offset="1" stop-color="#0f2b34"/>
+          </linearGradient>
+          <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2b5f68"/>
+            <stop offset="1" stop-color="#123641"/>
+          </linearGradient>
+          <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#f7d67f"/>
+            <stop offset="1" stop-color="#d88b2b" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="420" height="340" rx="18" fill="url(#skyG)"/>
+        <circle cx="292" cy="104" r="70" fill="url(#sunG)"/>
+        <circle cx="292" cy="104" r="26" fill="#f2c14e" opacity=".92"/>
+        <path d="M0 200 Q70 186 140 200 T280 198 T420 206 V340 H0 Z" fill="url(#seaG)"/>
+        <path d="M0 232 Q90 218 180 232 T420 238 V340 H0 Z" fill="#0e2b33" opacity=".72"/>
+        <g stroke="#f2c14e" stroke-opacity=".4" stroke-width="1.5">
+          <path d="M40 268h92"/><path d="M170 286h128"/><path d="M60 306h150"/><path d="M250 318h118"/>
+        </g>
+        <g fill="#f4f1ea" opacity=".82">
+          <circle cx="86" cy="86" r="2.6"/><circle cx="132" cy="58" r="1.8"/>
+          <circle cx="196" cy="98" r="2.2"/><circle cx="360" cy="66" r="2"/>
+          <circle cx="330" cy="152" r="1.6"/>
+        </g>
+        <rect x="24" y="24" width="372" height="292" rx="12" fill="none" stroke="#f2c14e" stroke-opacity=".22"/>
+      </svg>
+      <span class="hero-tag t1">潮汐留白 · 夜景组</span>
+      <span class="hero-tag t2">夜航西飞 · 短片03</span>
+      <span class="hero-tag t3">低温季风 · 底片扫描</span>
+    </div>
+  </div>
+</section>
+
+<!-- 主体三栏 -->
+<div class="layout">
+
+  <!-- 左频道索引 -->
+  <aside class="channel-col" aria-label="频道索引">
+    <p class="channel-title">类型频道</p>
+    <ul class="channel-list" id="channelList">
+      <li><a href="/#overview" class="active">年度总览<span class="cnt">46</span></a></li>
+      <li><a href="/#featured">作品精选<span class="cnt">12</span></a></li>
+      <li><a href="/#updates">更新记录<span class="cnt">10</span></a></li>
+      <li><a href="/#categories">类型索引<span class="cnt">8</span></a></li>
+      <li><a href="/#deep">深度解析<span class="cnt">3</span></a></li>
+      <li><a href="/#guide">观展路径<span class="cnt">4</span></a></li>
+      <li><a href="/#faq">常见问答<span class="cnt">6</span></a></li>
+      <li><a href="/#comments">读者评论<span class="cnt">16</span></a></li>
+      <li><a href="/#news">相关动态<span class="cnt">6</span></a></li>
+      <li><a href="/#rank">热度榜单<span class="cnt">8</span></a></li>
+    </ul>
+    <div class="channel-note">
+      投稿通道开放中：2025年未公开的街头底片可发送样片与拍摄说明，审核后归入「低温季风」补充组。
+    </div>
+  </aside>
+
+  <!-- 主内容 -->
+  <main class="main-col" id="mainContent">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>年度总览：2025 影像的几个方向</h2>
+        <p class="lead">自然光、城市边缘、深夜街拍、实验短片</p>
+      </div>
+      <div class="overview">
+        <p>
+          2025年凪光的拍摄集中在四条线上。<strong>自然光系列</strong>以海边与湿地为主，《潮汐留白》从3月拍到9月，固定机位记录同一片滩涂的潮位差；<strong>城市边缘系列</strong>走的是城郊接合部，废弃厂区、待拆民居、夜间加油站构成画面主体；<strong>深夜街拍</strong>集中在23点后的便利店与末班车站，《夜航西飞》短片是这条线的剪辑产物；<strong>人像与实验短片</strong>数量少，但拍摄参数记录最完整。
+        </p>
+        <p>
+          值得注意的条目集中在两类：一类是拍摄周期超过五个月的长期项目，《潮汐留白》《低温季风》都在此列，底片扫描件与数码备份并存；另一类是极短周期的单次拍摄，如《凌晨四点的加油站》只用了两卷胶片。从类型分布看，自然光占17组、城市边缘14组、深夜街拍9组，人像4组，短片2组，其余为跨类型混编。
+        </p>
+        <p>
+          2025年的作品在呈现方式上有一个变化：多数条目附带拍摄参数卡，包括机身、镜头、胶卷型号、光圈快门组合与当时的天气记录。参数卡不是装饰，它让不同条目之间有了可比性——同一台机身、同一支35mm镜头，在滩涂和加油站拍出的色温差异能直接对上号。
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="featured">
+      <div class="block-head">
+        <h2>2025 精选作品条目</h2>
+        <a class="link-more" href="/#categories">按类型筛选 →</a>
+      </div>
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-tide01/400/300" width="400" height="300" loading="lazy" alt="潮汐留白系列海边滩涂退潮后的纹理">
+            <span class="card-badge">自然光</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">潮汐留白</a></h3>
+            <div class="card-tags"><span class="tag">固定机位</span><span class="tag">滩涂</span><span class="tag accent">长期项目</span></div>
+            <p class="card-note">3月至9月在同一片滩涂完成12组拍摄，潮位差最大达2.8米，第7组与第11组使用同一支35mm镜头对照。</p>
+            <div class="card-meta"><span class="hot">热度 9.2</span><span class="score">★ 9.1</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-night02/400/300" width="400" height="300" loading="lazy" alt="夜航西飞短片中的末班车站灯光">
+            <span class="card-badge">实验短片</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">夜航西飞</a></h3>
+            <div class="card-tags"><span class="tag">短片03</span><span class="tag">末班车</span><span class="tag">23点后</span></div>
+            <p class="card-note">7分42秒，由9组深夜街拍剪成，全程无对白，环境声取自11月2日凌晨的便利店收银台。</p>
+            <div class="card-meta"><span class="hot">热度 8.8</span><span class="score">★ 8.7</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-monsoon03/400/300" width="400" height="300" loading="lazy" alt="低温季风系列湿地清晨的薄雾">
+            <span class="card-badge">自然光</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">低温季风</a></h3>
+            <div class="card-tags"><span class="tag">湿地</span><span class="tag">清晨</span><span class="tag accent">底片扫描</span></div>
+            <p class="card-note">1月与2月的6次清晨拍摄，气温最低零下3度，胶片在低温下的颗粒表现与数码版差异明显。</p>
+            <div class="card-meta"><span class="hot">热度 8.4</span><span class="score">★ 8.5</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-gas04/400/300" width="400" height="300" loading="lazy" alt="凌晨四点的加油站灯光与空荡的马路">
+            <span class="card-badge">深夜街拍</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">凌晨四点的加油站</a></h3>
+            <div class="card-tags"><span class="tag">单次拍摄</span><span class="tag">两卷胶片</span><span class="tag">城郊</span></div>
+            <p class="card-note">10月17日一次性完成，两卷Portra 400，快门多数在1/15秒，画面里只有加油机和便利店灯。</p>
+            <div class="card-meta"><span class="hot">热度 8.1</span><span class="score">★ 8.2</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-edge05/400/300" width="400" height="300" loading="lazy" alt="城市边缘系列待拆民居的窗与晾衣绳">
+            <span class="card-badge">城市边缘</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">待拆的第七街</a></h3>
+            <div class="card-tags"><span class="tag">民居</span><span class="tag">系列第4组</span><span class="tag accent">已补录</span></div>
+            <p class="card-note">8月拍摄时住户已搬空，只留下窗框上的挂钩和半截晾衣绳，11月6日补录4张底片扫描。</p>
+            <div class="card-meta"><span class="hot">热度 7.9</span><span class="score">★ 8.0</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-portrait06/400/300" width="400" height="300" loading="lazy" alt="窗边人像系列的自然侧光">
+            <span class="card-badge">人像</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">窗边侧光</a></h3>
+            <div class="card-tags"><span class="tag">自然光人像</span><span class="tag">50mm</span><span class="tag">4组</span></div>
+            <p class="card-note">全年仅4组人像，全部依靠窗边侧光完成，未使用反光板，拍摄参数卡记录完整。</p>
+            <div class="card-meta"><span class="hot">热度 7.6</span><span class="score">★ 7.8</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-store07/400/300" width="400" height="300" loading="lazy" alt="深夜便利店外的台阶与灯光">
+            <span class="card-badge">深夜街拍</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">便利店台阶</a></h3>
+            <div class="card-tags"><span class="tag">23点后</span><span class="tag">街头</span><span class="tag">系列第2组</span></div>
+            <p class="card-note">拍摄对象是深夜坐在便利店台阶上的人，多数为侧影与背影，画面构图统一在三分线左侧。</p>
+            <div class="card-meta"><span class="hot">热度 7.4</span><span class="score">★ 7.5</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-wall08/400/300" width="400" height="300" loading="lazy" alt="厂区围墙涂鸦与铁皮锈迹">
+            <span class="card-badge">城市边缘</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">厂区围墙</a></h3>
+            <div class="card-tags"><span class="tag">废弃厂区</span><span class="tag">锈迹</span><span class="tag accent">14组</span></div>
+            <p class="card-note">城市边缘系列里拍摄次数最多的一条线，铁皮锈迹在不同季节的颜色变化被单独记录。</p>
+            <div class="card-meta"><span class="hot">热度 7.2</span><span class="score">★ 7.4</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-shore09/400/300" width="400" height="300" loading="lazy" alt="海岸线长曝光下的云层与礁石">
+            <span class="card-badge">自然光</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">海岸线长曝光</a></h3>
+            <div class="card-tags"><span class="tag">长曝光</span><span class="tag">30秒</span><span class="tag">礁石</span></div>
+            <p class="card-note">30秒长曝光把云层压成条带，礁石保持静止，与《潮汐留白》的固定机位形成对照。</p>
+            <div class="card-meta"><span class="hot">热度 6.9</span><span class="score">★ 7.1</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-bus10/400/300" width="400" height="300" loading="lazy" alt="末班公交站台的空长椅与站牌">
+            <span class="card-badge">深夜街拍</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">末班站台</a></h3>
+            <div class="card-tags"><span class="tag">公交站</span><span class="tag">空镜</span><span class="tag">9组之一</span></div>
+            <p class="card-note">空镜为主，站牌上的末班时间被刻意收入画面，成为这条街拍线的时间锚点。</p>
+            <div class="card-meta"><span class="hot">热度 6.7</span><span class="score">★ 6.9</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-rain11/400/300" width="400" height="300" loading="lazy" alt="雨天车窗上的水痕与街灯倒影">
+            <span class="card-badge">实验短片</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">雨天车窗</a></h3>
+            <div class="card-tags"><span class="tag">短片02</span><span class="tag">4分18秒</span><span class="tag">水痕</span></div>
+            <p class="card-note">4分18秒，全部素材来自雨天出租车后座，车窗水痕与街灯倒影构成唯一叙事线索。</p>
+            <div class="card-meta"><span class="hot">热度 6.5</span><span class="score">★ 6.8</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/naoguang-dawn12/400/300" width="400" height="300" loading="lazy" alt="凌晨市场摊位的灯泡与蒸汽">
+            <span class="card-badge">城市边缘</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#featured">凌晨市场</a></h3>
+            <div class="card-tags"><span class="tag">批发市场</span><span class="tag">5点</span><span class="tag">蒸汽</span></div>
+            <p class="card-note">凌晨5点的批发市场，灯泡与蒸汽是主要光源，ISO普遍推到3200以上，噪点保留原样。</p>
+            <div class="card-meta"><span class="hot">热度 6.3</span><span class="score">★ 6.6</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 更新记录 -->
+    <section class="block" id="updates">
+      <div class="block-head">
+        <h2>2025 作品更新与补录</h2>
+        <p class="lead">截至 2026-11-08</p>
+      </div>
+      <ul class="update-list">
+        <li>
+          <time datetime="2026-11-08">11月8日</time>
+          <div>
+            <p class="u-title">《潮汐留白》新增第12组夜拍<span class="u-type">新增</span></p>
+            <p class="u-desc">这组夜拍在退潮后两小时完成，ISO 1600，月光作为主光源，滩涂反光占画面三分之一。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div>
+            <p class="u-title">「城市边缘」系列补录4张底片扫描<span class="u-type">补录</span></p>
+            <p class="u-desc">补录的是《待拆的第七街》拍摄时漏扫的4张，扫描分辨率2400dpi，颗粒比数码版更粗。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11月3日</time>
+          <div>
+            <p class="u-title">《夜航西飞》短片03 替换环境声版本<span class="u-type">修订</span></p>
+            <p class="u-desc">环境声由11月2日凌晨的便利店收银台重新录制，原来那版有空调低频噪音。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-29">10月29日</time>
+          <div>
+            <p class="u-title">《凌晨四点的加油站》上传拍摄参数卡<span class="u-type">参数</span></p>
+            <p class="u-desc">参数卡包含两卷Portra 400的机身、镜头与快门组合，多数曝光在1/15秒。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-24">10月24日</time>
+          <div>
+            <p class="u-title">《低温季风》湿地清晨组开放下载<span class="u-type">开放</span></p>
+            <p class="u-desc">开放的是1月与2月的6次清晨拍摄，底片扫描与数码备份各一套，共37张。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-19">10月19日</time>
+          <div>
+            <p class="u-title">新增类型索引「跨类型混编」<span class="u-type">分类</span></p>
+            <p class="u-desc">把同时含自然光与城市边缘元素的条目单列，首批归入6组。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-15">10月15日</time>
+          <div>
+            <p class="u-title">《厂区围墙》补充秋季锈迹对照<span class="u-type">对照</span></p>
+            <p class="u-desc">同一面围墙在春季与秋季的锈迹色差被并排放置，秋季那组拍摄于10月11日。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-12">10月12日</time>
+          <div>
+            <p class="u-title">《窗边侧光》人像组补标镜头信息<span class="u-type">修订</span></p>
+            <p class="u-desc">4组人像全部补标50mm镜头，其中两组使用同一支，光圈值统一在f/2.0。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-09">10月9日</time>
+          <div>
+            <p class="u-title">《雨天车窗》短片02 增加字幕轨<span class="u-type">新增</span></p>
+            <p class="u-desc">字幕轨只标注拍摄地点与时间，不添加解说，保持原片无对白的状态。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-05">10月5日</time>
+          <div>
+            <p class="u-title">年度总览页更新至46组<span class="u-type">统计</span></p>
+            <p class="u-desc">本次统计把跨类型混编的6组计入总数，自然光与城市边缘的组数相应调整。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="categories">
+      <div class="block-head">
+        <h2>按类型查找 2025 作品</h2>
+        <p class="lead">8 个类型索引</p>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#featured"><b>自然光</b><span class="num">17 组</span><span>滩涂、湿地、海岸线长曝光</span></a>
+        <a class="cat-item" href="/#featured"><b>城市边缘</b><span class="num">14 组</span><span>废弃厂区、待拆民居、凌晨市场</span></a>
+        <a class="cat-item" href="/#featured"><b>深夜街拍</b><span class="num">9 组</span><span>便利店台阶、末班站台、加油站</span></a>
+        <a class="cat-item" href="/#featured"><b>人像</b><span class="num">4 组</span><span>窗边侧光、自然光、50mm</span></a>
+        <a class="cat-item" href="/#featured"><b>实验短片</b><span class="num">2 部</span><span>夜航西飞、雨天车窗</span></a>
+        <a class="cat-item" href="/#featured"><b>跨类型混编</b><span class="num">6 组</span><span>自然光与城市边缘交叉条目</span></a>
+        <a class="cat-item" href="/#featured"><b>底片扫描</b><span class="num">11 组</span><span>低温季风、待拆的第七街</span></a>
+        <a class="cat-item" href="/#featured"><b>参数卡完整</b><span class="num">23 组</span><span>含机身、镜头、光圈快门记录</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <div class="block-head">
+        <h2>2025 影像的三个判断维度</h2>
+        <p class="lead">拍摄周期、光源条件、参数可核对性</p>
+      </div>
+      <div class="deep">
+        <h3>拍摄周期决定条目能不能比较</h3>
+        <p>
+          《潮汐留白》从3月拍到9月，12组拍摄覆盖了同一个滩涂从低潮位到高潮位的变化，第7组与第11组使用同一支35mm镜头、同一台机身，光圈都固定在f/8。这种一致性让两组画面可以直接叠放对照，潮位差2.8米带来的纹理变化一目了然。反过来，《凌晨四点的加油站》只用了两卷胶片、一次拍摄，它的价值在单张的曝光选择，而不在跨组比较。把两类条目放在同一张表格里比“完成度”没有意义，它们的可核对项不同。
+        </p>
+        <p>
+          一个可核对的例子：2026年10月15日补入的《厂区围墙》秋季对照，把同一面围墙在4月11日与10月11日的两张照片并排，锈迹从橙红转向暗褐，色差在参数卡上有白平衡记录对应。这条对照之所以成立，是因为两次拍摄的镜头与光圈相同，差异来源被压缩到季节这一项。
+        </p>
+
+        <h3>光源条件比器材型号更能解释画面差异</h3>
+        <p>
+          《低温季风》的6次清晨拍摄气温最低零下3度，胶片在低温下的颗粒表现与数码版差异明显。同一片湿地，1月与2月的两组在颗粒密度上相差约一档，参数卡记录显示两次的胶卷批次不同。器材型号在这里是次要的，低温与批次才是变量。
+        </p>
+        <p>
+          深夜街拍那条线更直接。《夜航西飞》短片03的环境声由2026年11月2日凌晨的便利店收银台重新录制，原来那版有空调低频噪音。声音层的修订说明一件事：深夜画面的信息量不只来自曝光，环境声同样是可核对的细节。便利店台阶那组照片里，收银台的提示音与画面中的灯光位置能对上，这种对应关系比单纯的“氛围好”更有说服力。
+        </p>
+        <div class="callout">
+          <strong>可核对的三层结构：</strong>已公开的拍摄参数卡（机身、镜头、光圈快门）、补录时的扫描分辨率与日期记录、短片修订版的环境声来源时间。三层各自独立，任一层缺失都会让条目之间的比较失去支点。
+        </div>
+
+        <h3>参数卡的完整度分层</h3>
+        <p>
+          46组作品里，参数卡完整的有23组，部分记录的有15组，仅有拍摄日期的8组。完整度直接影响条目能不能被引用。以人像组为例，4组《窗边侧光》全部补标了50mm镜头与f/2.0光圈，其中两组用同一支镜头，这让侧光角度与背景压缩的关系可以被讨论。城市边缘系列里，《待拆的第七街》11月6日补录的4张底片扫描把分辨率拉到2400dpi，颗粒比数码版更粗，补录日期与扫描参数都写进了条目。
+        </p>
+        <ul>
+          <li>完整参数卡：23组，含机身、镜头、胶卷型号、光圈快门组合、天气记录。</li>
+          <li>部分记录：15组，缺胶卷型号或天气记录中的一项。</li>
+          <li>仅日期：8组，多为极短周期的单次拍摄，如《凌晨四点的加油站》之外的零散条目。</li>
+        </ul>
+        <p>
+          完整度分层的意义在于，跨组比较只在完整参数卡的条目之间成立。把仅有日期的条目拉进对比，结论会滑向猜测。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>按什么顺序看这组作品</h2>
+        <p class="lead">从长期项目入手，再看单次拍摄</p>
+      </div>
+      <div class="guide">
+        <div class="guide-step">
+          <div class="step-num">01</div>
+          <h4>先看长期项目</h4>
+          <p>《潮汐留白》与《低温季风》拍摄周期都超过五个月，跨组对照的信息量最大。先看这两组，能建立对同一片场地不同季节的基准印象。</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">02</div>
+          <h4>再看单次拍摄</h4>
+          <p>《凌晨四点的加油站》只有两卷胶片，看点是单张的曝光选择与快门速度。把它当作长期项目的对照面，而不是完成度更低的版本。</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">03</div>
+          <h4>短片放在最后</h4>
+          <p>《夜航西飞》与《雨天车窗》需要连续观看，环境声与画面节奏是主要信息。先看图再看片，声音层的修订才容易被注意到。</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">04</div>
+          <h4>对照参数卡判断</h4>
+          <p>两组画面差异明显时，先翻参数卡看镜头与光圈是否相同。相同则差异来自光源或季节，不同则器材本身是变量。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>关于这组作品集的常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>《潮汐留白》一共有几组，拍摄时间跨度多长？</summary>
+          <div class="faq-body"><p>12组，从2025年3月拍到9月，跨度约七个月。第7组与第11组使用同一支35mm镜头、同一台机身，光圈固定在f/8，潮位差最大2.8米。</p></div>
+        </details>
+        <details class="faq">
+          <summary>《夜航西飞》短片03的环境声为什么在11月3日替换？</summary>
+          <div class="faq-body"><p>原来那版环境声带有空调低频噪音，11月2日凌晨在便利店收银台重新录制了一版，11月3日完成替换。新版只保留收银提示音与街道底噪。</p></div>
+        </details>
+        <details class="faq">
+          <summary>《低温季风》的胶片版和数码版差别在哪？</summary>
+          <div class="faq-body"><p>差别主要在颗粒密度。1月与2月的两组在颗粒上相差约一档，参数卡记录显示两次使用的胶卷批次不同。低温环境下胶片的表现与数码版在暗部过渡上也有区别。</p></div>
+        </details>
+        <details class="faq">
+          <summary>《待拆的第七街》补录的4张底片扫描分辨率是多少？</summary>
+          <div class="faq-body"><p>2400dpi，补录日期为2026年11月6日。补录的4张是拍摄时漏扫的部分，扫描件颗粒比数码备份更粗，条目里已注明。</p></div>
+        </details>
+        <details class="faq">
+          <summary>《窗边侧光》人像组用的什么镜头？</summary>
+          <div class="faq-body"><p>4组全部使用50mm镜头，光圈统一在f/2.0，未使用反光板。其中两组使用同一支镜头，侧光角度与背景压缩的关系在参数卡上可以对照。</p></div>
+        </details>
+        <details class="faq">
+          <summary>《凌晨四点的加油站》为什么只有两卷胶片？</summary>
+          <div class="faq-body"><p>这是一次性完成的单次拍摄，2025年10月17日凌晨，两卷Portra 400，多数曝光在1/15秒。条目定位是单张曝光选择，不做跨组比较。</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-head">
+        <h2>读者留下的评论</h2>
+        <p class="lead">16 条，围绕具体条目</p>
+      </div>
+      <div class="comment-grid">
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">海风不咸</span><span class="cm-time">11月8日</span></div><p class="cm-text">第12组夜拍里滩涂反光占了三分之一，月光打上去那片质感比白天那几组耐看。</p><span class="cm-ref">潮汐留白</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">三点半的猫</span><span class="cm-time">11月7日</span></div><p class="cm-text">《夜航西飞》替换环境声之后，便利店那段收银提示音终于不突兀了。之前那版空调声一直出戏。</p><span class="cm-ref">夜航西飞</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">胶片柜底层</span><span class="cm-time">11月7日</span></div><p class="cm-text">低温季风的颗粒差异我信，但两组胶卷批次不同这件事，参数卡上写得太小，翻半天才看到。</p><span class="cm-ref">低温季风</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">末班车常客</span><span class="cm-time">11月6日</span></div><p class="cm-text">站牌上的末班时间收进画面这个细节，确实只有经常坐末班车的人会注意。</p><span class="cm-ref">末班站台</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">不吃香菜</span><span class="cm-time">11月6日</span></div><p class="cm-text">说实话加油站那组我看了三遍，1/15秒还能端稳，手是真的稳。</p><span class="cm-ref">凌晨四点的加油站</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">七街搬走的</span><span class="cm-time">11月5日</span></div><p class="cm-text">待拆的第七街，窗框上那个挂钩我认得，以前就挂在那。</p><span class="cm-ref">待拆的第七街</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">显影液过期</span><span class="cm-time">11月4日</span></div><p class="cm-text">2400dpi扫描出来的颗粒，比数码版粗一圈，但暗部层次反而更顺。两版都留着是对的。</p><span class="cm-ref">待拆的第七街</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">窗边没位置</span><span class="cm-time">11月3日</span></div><p class="cm-text">人像只有4组，但每组参数都齐，f/2.0的背景压缩看得很清楚。希望明年多拍点。</p><span class="cm-ref">窗边侧光</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">厂区看门人</span><span class="cm-time">11月2日</span></div><p class="cm-text">厂区围墙春冬两季的锈迹颜色差挺明显的，并排放那一下才看出来。</p><span class="cm-ref">厂区围墙</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">雨天打不到车</span><span class="cm-time">11月1日</span></div><p class="cm-text">《雨天车窗》4分18秒，全程就盯着水痕看，居然没快进。</p><span class="cm-ref">雨天车窗</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">批发市场早班</span><span class="cm-time">10月30日</span></div><p class="cm-text">凌晨市场那组噪点保留原样，我觉得挺好，硬降噪反而没那个味。</p><span class="cm-ref">凌晨市场</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">长曝光手抖</span><span class="cm-time">10月28日</span></div><p class="cm-text">海岸线30秒那张云压成条带，跟潮汐留白的固定机位是一种思路的两种做法。</p><span class="cm-ref">海岸线长曝光</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">不署名</span><span class="cm-time">10月26日</span></div><p class="cm-text">分类里那个「参数卡完整」挺实用，比按拍摄地分清楚。</p></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">便利店夜班</span><span class="cm-time">10月25日</span></div><p class="cm-text">台阶那组拍的都是侧影背影，看着是尊重人的拍法。比怼脸强。</p><span class="cm-ref">便利店台阶</span></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">路过看看</span><span class="cm-time">10月22日</span></div><p class="cm-text">不太懂胶片，但是照片挺好看的，先收藏着。</p></div>
+
+        <div class="comment"><div class="cm-head"><span class="cm-name">光圈开到底</span><span class="cm-time">10月20日</span></div><p class="cm-text">跨类型混编那6组有点意思，自然光和城市边缘混在一起反而没那么割裂。</p><span class="cm-ref">跨类型混编</span></div>
+
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>2025 影像动态</h2>
+      </div>
+      <ul class="news-list">
+        <li>
+          <p class="n-title"><a href="/#news">凪光2025作品集年度总览页更新至46组，新增跨类型混编分类</a></p>
+          <p class="n-meta"><time datetime="2026-11-08">2026-11-08</time><span>归档</span></p>
+          <p class="n-sum">本次统计把6组跨类型条目单列，自然光由20组调整为17组，城市边缘由12组调整为14组。</p>
+        </li>
+        <li>
+          <p class="n-title"><a href="/#news">《夜航西飞》短片03完成环境声重录，11月3日上线修订版</a></p>
+          <p class="n-meta"><time datetime="2026-11-03">2026-11-03</time><span>短片</span></p>
+          <p class="n-sum">重录素材取自11月2日凌晨的便利店收银台，新版去掉空调低频噪音，片长仍为7分42秒。</p>
+        </li>
+        <li>
+          <p class="n-title"><a href="/#news">《待拆的第七街》补录4张底片扫描，分辨率2400dpi</a></p>
+          <p class="n-meta"><time datetime="2026-11-06">2026-11-06</time><span>补录</span></p>
+          <p class="n-sum">补录的4张是8月拍摄时漏扫的部分，扫描件颗粒比数码备份更粗，条目内已标注扫描日期。</p>
+        </li>
+        <li>
+          <p class="n-title"><a href="/#news">《低温季风》湿地清晨组开放下载，共37张</a></p>
+          <p class="n-meta"><time datetime="2026-10-24">2026-10-24</time><span>开放</span></p>
+          <p class="n-sum">开放范围是1月与2月的6次清晨拍摄，底片扫描与数码备份各一套，下载页附胶卷批次说明。</p>
+        </li>
+        <li>
+          <p class="n-title"><a href="/#news">《厂区围墙》秋季对照补入，与4月同机位并排</a></p>
+          <p class="n-meta"><time datetime="2026-10-15">2026-10-15</time><span>对照</span></p>
+          <p class="n-sum">两次拍摄使用同一支镜头、同一光圈，秋季那组拍摄于10月11日，锈迹由橙红转向暗褐。</p>
+        </li>
+        <li>
+          <p class="n-title"><a href="/#news">《窗边侧光》4组人像补标镜头信息，统一50mm与f/2.0</a></p>
+          <p class="n-meta"><time datetime="2026-10-12">2026-10-12</time><span>参数</span></p>
+          <p class="n-sum">补标后有两组确认为同一支镜头，侧光角度与背景压缩的关系可在参数卡上直接对照。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="related">
+      <div class="block-head">
+        <h2>相关推荐方向</h2>
+        <p class="lead">具体条目与类型</p>
+      </div>
+      <div class="rec-tags">
+        <a href="/#featured">潮汐留白 <span class="small">长期项目</span></a>
+        <a href="/#featured">夜航西飞 <span class="small">短片03</span></a>
+        <a href="/#featured">低温季风 <span class="small">底片扫描</span></a>
+        <a href="/#featured">凌晨四点的加油站 <span class="small">单次拍摄</span></a>
+        <a href="/#featured">待拆的第七街 <span class="small">城市边缘</span></a>
+        <a href="/#featured">窗边侧光 <span class="small">人像</span></a>
+        <a href="/#featured">海岸线长曝光 <span class="small">长曝光</span></a>
+        <a href="/#categories">参数卡完整条目 <span class="small">23组</span></a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：热度榜单 -->
+    <section class="block" id="rank">
+      <div class="block-head">
+        <h2>2025 作品热度榜</h2>
+        <p class="lead">按站内标记与参数完整度综合</p>
+      </div>
+      <ol class="rank-list">
+        <li><span class="rank-num">1</span><div class="rank-body"><b>潮汐留白 · 第12组夜拍</b><span>11月8日新增，月光主光源，热度9.2</span></div></li>
+        <li><span class="rank-num">2</span><div class="rank-body"><b>夜航西飞 · 短片03 修订版</b><span>11月3日替换环境声，热度8.8</span></div></li>
+        <li><span class="rank-num">3</span><div class="rank-body"><b>低温季风 · 湿地清晨组</b><span>10月24日开放下载，共37张，热度8.4</span></div></li>
+        <li><span class="rank-num">4</span><div class="rank-body"><b>凌晨四点的加油站</b><span>两卷Portra 400，多数曝光1/15秒，热度8.1</span></div></li>
+        <li><span class="rank-num">5</span><div class="rank-body"><b>待拆的第七街</b><span>11月6日补录4张底片扫描，热度7.9</span></div></li>
+        <li><span class="rank-num">6</span><div class="rank-body"><b>窗边侧光 · 人像4组</b><span>统一50mm与f/2.0，热度7.6</span></div></li>
+        <li><span class="rank-num">7</span><div class="rank-body"><b>便利店台阶</b><span>23点后侧影背影，热度7.4</span></div></li>
+        <li><span class="rank-num">8</span><div class="rank-body"><b>厂区围墙</b><span>秋季锈迹对照已补入，热度7.2</span></div></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="aside-col" aria-label="辅助信息">
+    <div class="side-card side-cta">
+      <h2>投稿通道</h2>
+      <p>2025年未公开的街头底片，附样片、拍摄日期与机身镜头信息，审核后归入「低温季风」补充组。</p>
+      <a class="btn" href="/#updates">查看投稿要求</a>
+    </div>
+
+    <div class="side-card">
+      <h2>最近补录</h2>
+      <div class="side-timeline">
+        <div class="tl-item"><time>11月8日</time><b>潮汐留白第12组夜拍</b></div>
+        <div class="tl-item"><time>11月6日</time><b>待拆的第七街 4张扫描</b></div>
+        <div class="tl-item"><time>11月3日</time><b>夜航西飞环境声替换</b></div>
+        <div class="tl-item"><time>10月29日</time><b>加油站参数卡上传</b></div>
+        <div class="tl-item"><time>10月24日</time><b>低温季风开放下载</b></div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <h2>类型速览</h2>
+      <ul class="side-list">
+        <li><span class="idx">01</span><b>自然光</b><span class="s-meta">17组</span></li>
+        <li><span class="idx">02</span><b>城市边缘</b><span class="s-meta">14组</span></li>
+        <li><span class="idx">03</span><b>深夜街拍</b><span class="s-meta">9组</span></li>
+        <li><span class="idx">04</span><b>人像</b><span class="s-meta">4组</span></li>
+        <li><span class="idx">05</span><b>实验短片</b><span class="s-meta">2部</span></li>
+        <li><span class="idx">06</span><b>跨类型混编</b><span class="s-meta">6组</span></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>参数卡完整度</h2>
+      <ul class="side-list">
+        <li><span class="idx">A</span><b>完整参数</b><span class="s-meta">23组</span></li>
+        <li><span class="idx">B</span><b>部分记录</b><span class="s-meta">15组</span></li>
+        <li><span class="idx">C</span><b>仅日期</b><span class="s-meta">8组</span></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="/#top" aria-label="凪光2025作品集首页">
+          <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1c4650"/>
+            <circle cx="32" cy="27" r="12" fill="none" stroke="#f2c14e" stroke-width="3"/>
+            <path d="M16 46h32M22 53h20" stroke="#f2c14e" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="32" cy="27" r="3.4" fill="#f2c14e"/>
+          </svg>
+          <span class="logo-text">凪光2025作品集</span>
+        </a>
+        <p>
+          覆盖2025年1月至12月的46组作品，含11组底片扫描、2部实验短片与23组完整参数卡条目；更新节奏按补录与修订分批发布，最近一批为11月8日的夜拍新增。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>作品分类</h3>
+        <ul>
+          <li><a href="/#categories">自然光 · 17组</a></li>
+          <li><a href="/#categories">城市边缘 · 14组</a></li>
+          <li><a href="/#categories">深夜街拍 · 9组</a></li>
+          <li><a href="/#categories">人像 · 4组</a></li>
+          <li><a href="/#categories">实验短片 · 2部</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>浏览路径</h3>
+        <ul>
+          <li><a href="/#overview">年度总览</a></li>
+          <li><a href="/#featured">作品精选</a></li>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 凪光2025作品集 · 内容为示例条目，作品名与参数用于展示用途</span>
+      <span class="upd">页面更新时间：2026-11-08（对应《潮汐留白》第12组夜拍新增）</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  if (menuToggle && mainNav){
+    menuToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && mainNav.classList.contains('open')){
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.focus();
+      }
+    });
+    mainNav.addEventListener('click', function(e){
+      var t = e.target.closest('a');
+      if (t && window.matchMedia('(max-width: 740px)').matches){
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > window.innerHeight * 0.9){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏当前板块高亮 */
+  var channelLinks = Array.prototype.slice.call(document.querySelectorAll('#channelList a'));
+  var sections = channelLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          channelLinks.forEach(function(a){
+            var id = a.getAttribute('href').replace('/#','');
+            if (id === en.target.id){
+              a.classList.add('active');
+            } else {
+              a.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {rootMargin: '-40% 0px -55% 0px', threshold: 0});
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* 搜索 */
+  var input = document.getElementById('siteSearch');
+  var msg = document.getElementById('searchMsg');
+  var searchables = Array.prototype.slice.call(document.querySelectorAll(
+    '#featured .card h3, #featured .card-note, #featured .card-tags .tag, #updates .u-title, #news .n-title, #categories .cat-item b, #categories .cat-item span'
+  ));
+
+  function clearMarks(){
+    searchables.forEach(function(el){
+      if (el.dataset.origHTML){
+        el.innerHTML = el.dataset.origHTML;
+      }
+    });
+  }
+
+  function escReg(s){
+    return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  }
+
+  input.addEventListener('input', function(){
+    clearMarks();
+    var q = input.value.trim();
+    if (!q){
+      msg.classList.remove('show');
+      msg.textContent = '';
+      return;
+    }
+    var lower = q.toLowerCase();
+    var hits = 0;
+    searchables.forEach(function(el){
+      var text = (el.textContent || '').toLowerCase();
+      if (text.indexOf(lower) !== -1){
+        hits++;
+        if (!el.dataset.origHTML){
+          el.dataset.origHTML = el.innerHTML;
+        }
+        var re = new RegExp('(' + escReg(q) + ')', 'gi');
+        el.innerHTML = el.innerHTML.replace(re, '<mark style="background:#f6e4c6;color:#5e3c10;border-radius:2px;">$1</mark>');
+      }
+    });
+    msg.classList.add('show');
+    if (hits === 0){
+      msg.textContent = '没有找到含“' + q + '”的作品名或类型词，可试试「潮汐留白」「夜航西飞」「低温季风」。';
+    } else {
+      msg.textContent = '找到 ' + hits + ' 处匹配，已在本页高亮。';
+    }
+  });
+
+  /* 菜单外部点击关闭（遮罩替代方案：点击页面其他区域收起） */
+  document.addEventListener('click', function(e){
+    if (!mainNav || !mainNav.classList.contains('open')) return;
+    if (mainNav.contains(e.target) || menuToggle.contains(e.target)) return;
+    mainNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  });
+})();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "凪光2025作品集",
+  "description": "凪光2025年度摄影与影像作品归档，含46组作品、类型索引、更新记录与深度解析。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《潮汐留白》一共有几组，拍摄时间跨度多长？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12组，从2025年3月拍到9月，跨度约七个月。第7组与第11组使用同一支35mm镜头、同一台机身，光圈固定在f/8，潮位差最大2.8米。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《夜航西飞》短片03的环境声为什么在11月3日替换？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "原来那版环境声带有空调低频噪音，11月2日凌晨在便利店收银台重新录制了一版，11月3日完成替换。新版只保留收银提示音与街道底噪。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《低温季风》的胶片版和数码版差别在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差别主要在颗粒密度。1月与2月的两组在颗粒上相差约一档，参数卡记录显示两次使用的胶卷批次不同。低温环境下胶片的表现与数码版在暗部过渡上也有区别。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《待拆的第七街》补录的4张底片扫描分辨率是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2400dpi，补录日期为2026年11月6日。补录的4张是拍摄时漏扫的部分，扫描件颗粒比数码备份更粗，条目里已注明。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《窗边侧光》人像组用的什么镜头？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4组全部使用50mm镜头，光圈统一在f/2.0，未使用反光板。其中两组使用同一支镜头，侧光角度与背景压缩的关系在参数卡上可以对照。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《凌晨四点的加油站》为什么只有两卷胶片？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是一次性完成的单次拍摄，2025年10月17日凌晨，两卷Portra 400，多数曝光在1/15秒。条目定位是单张曝光选择，不做跨组比较。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+                                                                                             </html>
